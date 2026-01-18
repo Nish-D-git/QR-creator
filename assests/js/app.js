@@ -37,6 +37,6 @@ downloadBtn.addEventListener("click", () => {
 
   const a = document.createElement("a");
   a.href = img.src;
-  a.download = "qr-code.png";
+  a.download = "QR ~PrimeDev.png";
   a.click();
 });
