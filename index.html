@@ -6,21 +6,50 @@
   <title>Free QR Code Generator</title>
   <link rel="stylesheet" href="assests/css/style.css" />
 </head>
+
 <body>
 
   <div class="container">
     <h1>Free QR Code Generator</h1>
-    <p>Paste any link and generate QR instantly ✅</p>
+    <p class="subtitle">
+      Paste any link and generate QR instantly ⚡
+    </p>
 
+    <!-- QR Generator Area (UNCHANGED STRUCTURE) -->
     <input id="linkInput" type="text" placeholder="Enter URL here..." />
     <button id="generateBtn">Generate QR</button>
 
     <div id="qrBox"></div>
 
     <button id="downloadBtn" class="hidden">Download QR</button>
+
+    <!-- Info Sections -->
+    <div class="info-section">
+      <h2>Who should use this?</h2>
+      <ul>
+        <li>🎓 Students & Teachers</li>
+        <li>🏪 Shop & business owners</li>
+        <li>📸 Content creators</li>
+        <li>🎉 Event organizers</li>
+      </ul>
+    </div>
+
+    <div class="info-section">
+      <h2>Where can you use QR codes?</h2>
+      <ul>
+        <li>💍 Wedding invitations</li>
+        <li>📞 Phone number & WhatsApp</li>
+        <li>📍 Google Map locations</li>
+        <li>📲 Instagram / LinkedIn profiles</li>
+        <li>💳 UPI & payment posters</li>
+      </ul>
+    </div>
+
+    <p class="footer-text"><i>Made by PrimeDev</i></p>
   </div>
 
-  <script src="libs/qrcode.min.js"></script>
+  <!-- Scripts (ORDER MATTERS) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="assests/js/app.js"></script>
 </body>
 </html>

@@ -1,54 +1,113 @@
-body {
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #f5f7ff;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #fdf2ff);
   margin: 0;
   padding: 0;
 }
 
 .container {
-  width: 90%;
-  max-width: 450px;
+  width: 95%;
+  max-width: 520px;
   margin: 60px auto;
   background: white;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 h1 {
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 6px;
 }
 
+.subtitle {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Input */
 input {
-  width: 95%;
-  padding: 12px;
-  margin: 15px 0;
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 15px;
 }
 
+input:focus {
+  border-color: #4a57ff;
+  outline: none;
+}
+
+/* Buttons */
 button {
-  padding: 12px 20px;
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
   border: none;
-  background: #4a57ff;
+  background: linear-gradient(135deg, #4a57ff, #7a4dff);
   color: white;
   font-size: 15px;
-  border-radius: 8px;
+  font-weight: bold;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 10px 0;
+  transition: 0.25s ease;
 }
 
 button:hover {
-  background: #2f3cff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(74,87,255,0.3);
 }
 
+/* QR */
 #qrBox {
-  margin: 20px auto;
+  margin: 25px auto;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 14px;
   width: fit-content;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06);
 }
 
+/* Info sections */
+.info-section {
+  text-align: left;
+  margin-top: 22px;
+  padding: 16px;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+.info-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 25px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Hidden (USED BY JS – DO NOT REMOVE) */
 .hidden {
   display: none;
 }

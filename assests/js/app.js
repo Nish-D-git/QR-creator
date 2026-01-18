@@ -13,6 +13,11 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
+   if (link.length > 1000) {
+    alert("Link is too long ❌ Please use a short link (bit.ly / tinyurl) then generate QR ✅");
+    return;
+  }
+
   // Clear old QR
   qrBox.innerHTML = "";
 
