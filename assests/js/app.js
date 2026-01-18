@@ -13,7 +13,7 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
-   if (link.length > 1000) {
+  if (link.length > 1000) {
     alert("Link is too long ❌ Please use a short link (bit.ly / tinyurl) then generate QR ✅");
     return;
   }
@@ -32,11 +32,31 @@ generateBtn.addEventListener("click", () => {
 });
 
 downloadBtn.addEventListener("click", () => {
+  // ✅ BEST: Download from canvas (works on mobile)
+  const canvas = qrBox.querySelector("canvas");
+
+  if (canvas) {
+    const pngUrl = canvas.toDataURL("image/png");
+
+    const a = document.createElement("a");
+    a.href = pngUrl;
+    a.download = "QR ~PrimeDev.png";
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    return;
+  }
+
+  // Fallback: If QR library generated image instead of canvas
   const img = qrBox.querySelector("img");
   if (!img) return;
 
   const a = document.createElement("a");
   a.href = img.src;
   a.download = "QR ~PrimeDev.png";
+
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
 });
