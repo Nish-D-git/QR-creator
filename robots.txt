@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nish-d-git.github.io/QR-creator/sitemap.xml
